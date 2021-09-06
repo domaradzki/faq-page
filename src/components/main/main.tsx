@@ -32,15 +32,18 @@ const Main: FunctionComponent = () => {
       setGroups(groupsData);
     });
   }, []);
+
   const options = {
     useExtendedSearch: false,
     threshold: 0.6,
     keys: ['title', 'content'],
   };
+
   const query = 'rig';
   const fuse = new Fuse(data, options);
   const result = fuse.search(query ? `'${query}` : ' ');
   const flatResult = result.map((item) => ({ ...item.item }));
+
   const renderData = Object.values(groups).map((side: Group[]) => {
     return side.map((category: Group) => ({
       ...category,
@@ -59,7 +62,11 @@ const Main: FunctionComponent = () => {
                 item.questions.length > 0 && (
                   <Faqlist key={item.name} categoryName={item.name}>
                     {item.questions.map((question: Question) => (
-                      <Faqbox key={question.id} title={question.title}></Faqbox>
+                      <Faqbox
+                        key={question.id}
+                        title={question.title}
+                        content={question.content}
+                      ></Faqbox>
                     ))}
                   </Faqlist>
                 )
