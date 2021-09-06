@@ -1,0 +1,16 @@
+.faqlist {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.faqcategory {
+  color: #092b38;
+  font-size: 22px;
+  text-align: center;
+  height: 65px;
+  margin: 0 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
