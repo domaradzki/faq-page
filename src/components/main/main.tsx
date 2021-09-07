@@ -11,7 +11,7 @@ import { Question, Group, Groups, Item } from '../../types/types';
 import styles from './main.module.scss';
 import Faqcolumn from '../faqcolumn/faqcolumn';
 
-const Main: FunctionComponent = () => {
+const Main: FunctionComponent<{ query: string }> = ({ query }) => {
   const [data, setData] = useState<Item[]>([]);
   const [groups, setGroups] = useState<Groups>({});
 
@@ -39,7 +39,6 @@ const Main: FunctionComponent = () => {
     keys: ['title', 'content'],
   };
 
-  const query = 'rig';
   const fuse = new Fuse(data, options);
   const result = fuse.search(query ? `'${query}` : ' ');
   const flatResult = result.map((item) => ({ ...item.item }));
