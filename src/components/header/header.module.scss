@@ -7,4 +7,19 @@
   background-size: cover;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  color: black;
+  font-size: 32px;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: 300px;
+  }
+  .title {
+    font-size: 28px;
+  }
 }

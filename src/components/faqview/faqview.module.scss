@@ -5,3 +5,9 @@
   column-gap: 20px;
   width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+  .faqview {
+    grid-template-columns: 1fr;
+  }
+}

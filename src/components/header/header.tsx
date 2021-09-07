@@ -8,6 +8,7 @@ const Header: FunctionComponent<{ query: string; setQuery: Function }> = ({
 }) => {
   return (
     <header className={styles.header}>
+      <h1 className={styles.title}>How can we help You ?</h1>
       <SearchBar query={query} setQuery={setQuery} />
     </header>
   );

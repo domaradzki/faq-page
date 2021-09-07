@@ -37,3 +37,19 @@
 .show {
   display: block;
 }
+
+@media screen and (max-width: 768px) {
+  .faqbox {
+    width: 100%;
+    height: auto;
+    padding: 0 10px;
+  }
+  .faqtitle {
+    min-height: 65px;
+    height: auto;
+    font-size: 20px;
+  }
+  .faqcontent {
+    font-size: 16px;
+  }
+}
